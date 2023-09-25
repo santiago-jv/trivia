@@ -2,7 +2,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:trivia/domain/constants/question_constants.dart';
 import 'package:trivia/domain/models/question_model.dart';
 import 'package:trivia/domain/services/question_service.dart';
-import 'package:trivia/infrastructure/trivia/services/trivia_service/constants/trivia_interfaces.dart';
+import 'package:trivia/infrastructure/trivia/services/trivia_service/constants/trivia_params.dart';
 
 void main() {
   group('Question Service', () {
@@ -12,7 +12,7 @@ void main() {
       final QuestionService categoryService = QuestionServiceImpl();
 
       final QuestionsListParams params = QuestionsListParams(
-          amount: 3, difficulty: QuestionDifficulty.easy, category: 10);
+          amount: 3, difficulty: QuestionDifficulty.easy, categoryId: 10);
 
       final result = await categoryService.getQuestions(params);
 

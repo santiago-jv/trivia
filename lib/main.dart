@@ -3,7 +3,7 @@ import 'package:trivia/domain/models/category_model.dart';
 import 'package:trivia/domain/models/question_model.dart';
 import 'package:trivia/domain/services/category_service.dart';
 import 'package:trivia/domain/services/question_service.dart';
-import 'package:trivia/infrastructure/trivia/services/trivia_service/constants/trivia_interfaces.dart';
+import 'package:trivia/infrastructure/trivia/services/trivia_service/constants/trivia_params.dart';
 import 'package:flutter/foundation.dart';
 
 void main() async {
@@ -12,7 +12,7 @@ void main() async {
 
   final QuestionService questionService = QuestionServiceImpl();
   QuestionsListParams params =
-      QuestionsListParams(amount: 3, difficulty: QuestionDifficulty.easy, category: 10);
+      QuestionsListParams(amount: 3, difficulty: QuestionDifficulty.easy, categoryId: 10);
 
   List<QuestionModel> questions = await questionService.getQuestions(params);
   for (var question in questions) {

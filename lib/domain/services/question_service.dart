@@ -1,5 +1,5 @@
 import 'package:trivia/domain/models/question_model.dart';
-import 'package:trivia/infrastructure/trivia/services/trivia_service/constants/trivia_interfaces.dart';
+import 'package:trivia/infrastructure/trivia/services/trivia_service/constants/trivia_params.dart';
 import 'package:trivia/infrastructure/trivia/services/trivia_service/trivia_service.dart';
 
 abstract class QuestionService {

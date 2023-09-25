@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:trivia/infrastructure/trivia/models/trivia_category.dart';
 import 'package:trivia/infrastructure/trivia/models/trivia_question_model.dart';
-import 'package:trivia/infrastructure/trivia/services/trivia_service/constants/trivia_interfaces.dart';
+import 'package:trivia/infrastructure/trivia/services/trivia_service/constants/trivia_params.dart';
 import '../../config/http.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -21,7 +21,7 @@ class TriviaApiServiceImpl implements TriviaApiService {
     Map<String, dynamic> queryParameters = {
       'amount': params.amount.toString(),
       'difficulty': params.difficulty.name,
-      'category': params.category.toString(),
+      'category': params.categoryId.toString(),
     };
 
     final apiUrlWithQuestionPath = apiUrl.replace(path: '/api.php');
